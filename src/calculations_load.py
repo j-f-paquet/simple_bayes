@@ -58,11 +58,11 @@ for i, s in enumerate(system_strs):
             #validation_data[s] = np.delete(dsv[s], delete_design_pts_validation_set, 0)
             print("validation_data.shape = " + str(dsv.shape))
 
-    #load the MAP calculations
-    print("Loading {:s} MAP calculations from ".format(s) + SystemsInfo[s]['MAP_obs_file'])
-    try:
-        dsMAP = np.fromfile(SystemsInfo[s]["MAP_obs_file"], dtype=sdtype)
-        MAP_data[s] = dsMAP[s]
-        print("MAP_data.shape = " + str(dsMAP.shape))
-    except:
-        print("No MAP calculations found for system " + s)
+#    #load the MAP calculations
+#    print("Loading {:s} MAP calculations from ".format(s) + SystemsInfo[s]['MAP_obs_file'])
+#    try:
+#        dsMAP = np.fromfile(SystemsInfo[s]["MAP_obs_file"], dtype=sdtype)
+#        MAP_data[s] = dsMAP[s]
+#        print("MAP_data.shape = " + str(dsMAP.shape))
+#    except:
+#        print("No MAP calculations found for system " + s)

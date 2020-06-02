@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 import numpy as np
 
-pT_bins = np.array( [ [0,5],[5,10],[10,20],[20,30],[30,40],[40,50],[50,60],[60,70] ] ) # 8 bins
+pT_bins_model = np.array( [ [0,5],[5,10],[10,20],[20,30],[30,40],[40,50],[50,60],[60,70] ] ) # 8 bins
 
 #the observables which will be used for parameter estimation
 obs_cent_list = {
 
 'Au-Au-200': {
-	'RAA_charged_hadrons' : pT_bins,
+	'RAA_charged_hadrons' : pT_bins_model,
     },
 
 #'Au-Au-200': {

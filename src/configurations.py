@@ -58,9 +58,6 @@ num_systems = len(system_strs)
 #these are problematic points for Pb Pb 2760 run with 500 design points
 nan_sets_by_deltaf = {
                         0 : set([]),
-                        1 : set([]),
-                        2 : set([]),
-                        3 : set([])
                     }
 nan_design_pts_set = nan_sets_by_deltaf[idf]
 
@@ -125,7 +122,7 @@ SystemsInfo = {"{:s}-{:s}-{:d}".format(*s): systems_setting(*s) \
 
 
 if 'Au-Au-200' in system_strs:
-    SystemsInfo["Au-Au-200"]["run_id"] = "production_500pts_Au_Au_200"
+    SystemsInfo["Au-Au-200"]["run_id"] = "Au_Au_200"
     SystemsInfo["Au-Au-200"]["n_design"] = 3
     SystemsInfo["Au-Au-200"]["n_validation"] = 0
     SystemsInfo["Au-Au-200"]["design_remove_idx"]=list(delete_design_pts_set)
@@ -173,13 +170,6 @@ set_exp_error_to_zero = False
 # will be multiplied by the corresponding factor.
 change_exp_error = False
 change_exp_error_vals = {
-                        'Au-Au-200': {},
-
-                        'Pb-Pb-2760' : {
-                                        'dN_dy_proton' : 1.e-1,
-                                        'mean_pT_proton' : 1.e-1
-                                        }
-
 }
 
 #this switches on/off parameterized experimental covariance btw. centrality bins and groups

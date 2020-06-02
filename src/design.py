@@ -110,35 +110,7 @@ class Design:
         self.keys, self.labels, self.range = map(list, zip(*[
 
         #trento
-        ('norm', r'$N$[${:1.2f}$TeV]'.format(self.beam_energy/1000), (norm_range)),
-        ('trento_p', r'$p$',                  ( -0.7,   0.7 )),
-        ('sigma_k', r'$\sigma_k$',            ( 0.3,    2.0 )),
-        ('nucleon_width', r'$w$ [fm]',        ( 0.5,    1.5 )),
-        ('dmin3', r'$d_{\mathrm{min}}^3$ [fm]', ( 0.0, 1.7**3 )),
-
-        #freestreaming
-        ('tau_R', r'$\tau_R$ [fm/$c$]', (  0.3, 2.0 )),
-        ('alpha',  r'$\alpha$',         ( -0.3, 0.3 )),
-
-        #shear visc
-        ('eta_over_s_T_kink_in_GeV', r'$T_{\eta,\mathrm{kink}}$ [GeV]',              ( 0.13, 0.3 )),
-        ('eta_over_s_low_T_slope_in_GeV', r'$a_{\eta,\mathrm{low}}$ [GeV${}^{-1}$]', ( -2.0, 1.0 )),
-        ('eta_over_s_high_T_slope_in_GeV',r'$a_{\eta,\mathrm{high}}$ [GeV${}^{-1}$]',( -1.0, 2.0 )),
-        ('eta_over_s_at_kink', r'$(\eta/s)_{\mathrm{kink}}$',                        ( .01, 0.2 )),
-
-        #bulk visc
-        ('zeta_over_s_max',             r'$(\zeta/s)_{\max}$' , (0.01,  0.2)),
-        ('zeta_over_s_T_peak_in_GeV',   r'$T_{\zeta,c}$ [GeV]', (0.12,  0.3)),
-        ('zeta_over_s_width_in_GeV',   r'$w_{\zeta}$ [GeV]'   , (0.025 ,  0.15)),
-        ('zeta_over_s_lambda_asymm',    r'$\lambda_{\zeta}$'  , (-0.8,  0.8)),
-
-        #relaxation times
-        ('shear_relax_time_factor',  r'$b_{\pi}$' ,  ( 2.0, 8.0 )),
-        #('bulk_relax_time_factor',   r'$b_{\Pi}$' , ( 1.5, 10. )),
-        #('bulk_relax_time_power',   r'$q_{\Pi}$' ,  ( 0.0, 2.5 )),
-
-        #particlization temp
-        ('Tswitch',  r'$T_{\mathrm{sw}}$ [GeV]', (0.13,  0.165)),
+        ('kappa', r'$\kappa$',                  ( 0.25,   5.0 )),
         ]))
 
         self.ndim = len(self.range)
